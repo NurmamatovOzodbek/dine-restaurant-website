@@ -10,8 +10,35 @@ body {
   margin: 0;
   padding: 0;
 }
+body::-webkit-scrollbar {
+  width: 0;
+}
 
 .container {
-  max-width: 1110px;
+  max-width: 1140px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+button {
+  width: 100%;
+  max-width: 245px;
+  padding: 25px 0 23px 0;
+  border: 1px solid #FFF;
+  background: #111;
+  cursor: pointer;
+}
+button a {
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 2.5px;
+  font-size: 17px;
+  color: #FFF;
+  text-decoration: none;
+}
+button:hover {
+  background: white;
+}
+button:hover a {
+  color: #111;
 }/*# sourceMappingURL=reservation.css.map */

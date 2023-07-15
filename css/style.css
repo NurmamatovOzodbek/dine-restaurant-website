@@ -10,8 +10,111 @@ body {
   margin: 0;
   padding: 0;
 }
+body::-webkit-scrollbar {
+  width: 0;
+}
 
 .container {
-  max-width: 1110px;
+  max-width: 1140px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+button {
+  width: 100%;
+  max-width: 245px;
+  padding: 25px 0 23px 0;
+  border: 1px solid #FFF;
+  background: #111;
+  cursor: pointer;
+}
+button a {
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 2.5px;
+  font-size: 17px;
+  color: #FFF;
+  text-decoration: none;
+}
+button:hover {
+  background: white;
+}
+button:hover a {
+  color: #111;
+}
+
+header {
+  width: 100%;
+  padding: 65px 0 198px 0;
+  background: rgb(0, 0, 0);
+  background-image: url(/img/homepage/hero-bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: right 0;
+}
+header .header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 153px;
+}
+header .header section {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+}
+header .header section .header__content {
+  width: 100%;
+  max-width: 508px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+}
+header .header section .header__content .about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+header .header section .header__content .about h1 {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 80px;
+  letter-spacing: -1px;
+}
+header .header section .header__content .about p {
+  width: 100%;
+  max-width: 445px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+header .header section .timer {
+  width: 100%;
+  max-width: 552px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header section .timer div {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #FFF;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .header section .timer div p {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 2.5px;
+}
+header .header section .timer div span {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 13px;
 }/*# sourceMappingURL=style.css.map */
