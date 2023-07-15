@@ -75,53 +75,53 @@ header{
     }
   }
 }
-// main{
-//   width: 100%;
-//   background-image: url(/img/patterns/pattern-curve-top-right.svg), url(/img/patterns/pattern-curve-top-left.svg);
-//   background-repeat: no-repeat, no-repeat;
-//   background-position: left 250px, right 1091px;
-//   display: flex;
-//   section{
-//     // background: red;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     gap: 15px;
-//     justify-content: space-between;
-//     transform: translateY(-70px);
-//     .enjoyable__img{
-//       width: 540px;
-//       height: 720px;
-//       background: #EDEDED;
-//       box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.50);
-//     }
-//     .enjoyable__about{
-//       width: 100%;
-//       max-width: 445px;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: flex-start;
-//       gap: 55px;
-//       .about{
-//         width: 100%;
-//         display: flex;
-//         flex-direction: column;
-//         gap: 27px;
-//       }
-//       h3{
-//         font-size: 48px;
-//         line-height: 48px;
-//         font-weight: 700;
-//         letter-spacing: -0.5px;
-//         color: #242B37;
-//       }
-//       p{
-//         font-size: 20px;
-//         font-weight: 400;
-//         line-height: 30px;
-//         color: #242B37;
-//       }
-//     }
-//   }
+main{
+  width: 100%;
+  background-image: url(/img/patterns/pattern-curve-top-right.svg), url(/img/patterns/pattern-curve-top-left.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 250px, right 1091px;
+  display: flex;
+  section{
+    // background: red;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    transform: translateY(-70px);
+    .enjoyable__img{
+      width: 540px;
+      height: 720px;
+      background: #EDEDED;
+      box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.50);
+    }
+    .enjoyable__about{
+      width: 100%;
+      max-width: 445px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 55px;
+      .about{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+      }
+      h3{
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        color: #242B37;
+      }
+      p{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #242B37;
+      }
+    }
+  }
 
-// }
+}
