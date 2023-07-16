@@ -294,30 +294,30 @@ main{
       display: none;
     }
   }
-//   .booking__title{
-//     width: 100%;
-//     padding: 88px 0;
-//     background-image: url(/img/booking/hero-bg-desktop.jpg);
-//     background-repeat: no-repeat;
-//     background-size: 100%;
-//     .booking__info{
-//       display: flex;
-//       align-items: center;
-//       justify-content: space-between;
-//       h2{
-//         font-size: 48px;
-//         font-weight: 700;
-//         letter-spacing: -0.5px;
-//         color: #FFF;
-//       }
-//       button{
-//         background: none;
-//         &:hover{
-//           background: white;
-//         }
-//       }
-//     }
-//   }
+  .booking__title{
+    width: 100%;
+    padding: 88px 0;
+    background-image: url(/img/booking/hero-bg-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .booking__info{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2{
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        color: #FFF;
+      }
+      button{
+        background: none;
+        &:hover{
+          background: white;
+        }
+      }
+    }
+  }
 }
 // footer{
 //   width: 100%;
