@@ -49,3 +49,12 @@ button{
     padding: 0 39px;
   }
 }
+
+//MOBILE VERSION
+@media only screen and (max-width:600px) {
+  .container{
+    // max-width: 920px;
+    // margin: 0 auto;
+    padding: 0 24px;
+  }
+}
