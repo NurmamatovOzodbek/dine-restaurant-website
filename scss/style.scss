@@ -319,33 +319,33 @@ main{
     }
   }
 }
-// footer{
-//   width: 100%;
-//   background: #111;
-//   padding: 80px 0;
-//   section{
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     color: white;
-//     background-image: none;
+footer{
+  width: 100%;
+  background: #111;
+  padding: 80px 0;
+  section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    background-image: none;
 
-//     font-size: 14px;
-//     font-weight: 400;
-//     line-height: 28px;
-//     letter-spacing: 2px;
-//     text-transform: uppercase;
-//     address{
-//       width: 100%;
-//       max-width: 244px;
-//       font-style: normal;
-//     }
-//     .open__time{
-//       width: 100%;
-//       max-width: 446px;
-//     }
-//   }
-// }
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    address{
+      width: 100%;
+      max-width: 244px;
+      font-style: normal;
+    }
+    .open__time{
+      width: 100%;
+      max-width: 446px;
+    }
+  }
+}
 
 //TABLET VERSION
