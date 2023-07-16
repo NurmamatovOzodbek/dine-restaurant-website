@@ -7,6 +7,9 @@ header{
   background-image: url(/img/homepage/hero-bg-desktop.png);
   background-repeat: no-repeat;
   background-position: right 0;
+  #tablet{
+    display: none;
+  }
   .header{
     display: flex;
     flex-direction: column;
@@ -49,6 +52,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 15px;
         div{
           width: 120px;
           height: 120px;
@@ -321,33 +325,223 @@ main{
     }
   }
 }
-footer{
-  width: 100%;
-  background: #111;
-  padding: 80px 0;
-  section{
+
+
+//TABLET VERSION
+@media only screen and (max-width:1000px) {
+  header{
+    padding: 0 0 216px 0;
+    background: #000000;
+    background-image: none;
+    #tablet{
+      display: block;
+      width: 100%;
+    }
+    .header{
+      align-items: center;
+      row-gap: 38px;
+      section{
+        gap: 0px;
+        .header__content{
+          width: 100%;
+          max-width: 100%;
+          align-items: center;
+          gap: 52px;
+          .about{
+            width: 100%;
+            align-items: center;
+            gap: 20px;
+            h1{
+              text-align: center;
+              font-size: 48px;
+              font-weight: 300;
+              line-height: 64px;
+              letter-spacing: -0.6px;
+            }
+            p{
+              width: 100%;
+              max-width: 573px;
+              text-align: center;
+            }
+          }
+        }
+        .timer{
+          display: none;
+        }
+      }
+    }
+  }
+  main{
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: white;
-    background-image: none;
+    flex-direction: column;
+    section{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 118px;
 
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    address{
-      width: 100%;
-      max-width: 244px;
-      font-style: normal;
+      background-image: url(/img/patterns/pattern-curve-top-right.svg), url(/img/patterns/pattern-curve-top-left.svg);
+      background-repeat: no-repeat, no-repeat;
+      background-position: -517px 100px, 511px bottom;
+      .title__about{
+        align-items: center;
+        gap: 39px;
+        h3{
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+      }
+      .enjoyable{
+        align-items: center;
+        gap: 56px;
+        flex-direction: column;
+        transform: translateY(-96px);
+        .enjoyable__img{
+          width: 573px;
+          height: 360px;
+          box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.50);
+          // transform: translateY(-70px);
+          img{
+            width: 573px;
+            height: 360px;
+          }
+        }
+      }
+      .locally{
+        transform: translateY(px);
+        flex-direction: column-reverse;
+        .enjoyable__img{
+          &::before{
+            content: url(/img/patterns/pattern-lines.svg);
+            position: absolute;
+            top: 228px;
+            right: -58px;
+          }
+        }
+      }
     }
-    .open__time{
+    .slider__title{
+      padding: 96px 0;
+      .title{
+        flex-direction: column;
+        align-items: center;
+        gap: 54px;
+      }
+      .slider{
+        .slider__content{
+          width: 100%;
+          max-width: 100%;
+          flex-direction: column;
+          gap: 24px;
+          // overflow: hidden;
+          .slider__one{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1494140625);
+
+            position: relative;
+            &::before{
+              display: block;
+              content: '';
+              width: 32px;
+              height: 1px;
+              background: #9E7F66;
+              position: absolute;
+              top: 18px;
+              left: 128px;
+            }
+            img{
+              width: 128px;
+            }
+          }
+          .slider__three{
+            border: none;
+          }
+        }
+        .btn__prev{
+          display: none;
+        }
+        .btn__next{
+          display: none;
+        }
+      }
+    }
+    .tab__title{
+      background-position: -517px top;
+      padding: 120px 0;
+      align-items: center;
+
+      .tab__contents{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 57px;
+        .tab__img{
+          img{
+            width: 573px;
+            height: 360px;
+          }
+          &::before{
+            top: -38px;
+            left: -58px;
+          }
+        }
+        .tab__content{
+          width: 100%;
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: center;
+          gap: 47px;
+          .tab__about{
+            align-items: center;
+            .title__about{
+              width: 100%;
+              max-width: 457px;
+            }
+          }
+          .tab__links{
+            max-width: 689px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            .tab__link{
+              width: 100%;
+              max-width: 223px;
+              text-align: center;
+              &::before{
+                // display: block;
+                position: absolute;
+                left: 85px;
+                top: 30px;
+                content: '';
+                width: 48px;
+                height: 1px;
+                background: #9E7F66;
+              }
+            }
+          }
+        }
+      }
+      .one{
+        display: none;
+      }
+    }
+    .booking__title{
       width: 100%;
-      max-width: 446px;
+      padding: 72px 0 64px 0;
+      background-image: url(/img/booking/hero-bg-tablet.jpg);
+      .booking__info{
+        flex-direction: column;
+        gap: 24px;
+      }
     }
   }
 }
-
-//TABLET VERSION

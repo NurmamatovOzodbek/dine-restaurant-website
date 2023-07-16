@@ -40,3 +40,12 @@ button{
     }
   }
 }
+
+//TABLET VERSION
+@media only screen and (max-width:1000px) {
+  .container{
+    // max-width: 920px;
+    // margin: 0 auto;
+    padding: 0 39px;
+  }
+}
