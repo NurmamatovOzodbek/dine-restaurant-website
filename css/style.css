@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -38,11 +39,125 @@ button a {
 }
 button:hover {
   background: white;
+  border: 1px solid #111;
 }
 button:hover a {
   color: #111;
 }
 
+@media only screen and (max-width: 1000px) {
+  .container {
+    padding: 0 39px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+button {
+  width: 100%;
+  max-width: 245px;
+  padding: 25px 0 23px 0;
+  border: 1px solid #FFF;
+  background: #111;
+  cursor: pointer;
+}
+button a {
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 2.5px;
+  font-size: 17px;
+  color: #FFF;
+  text-decoration: none;
+}
+button:hover {
+  background: white;
+  border: 1px solid #111;
+}
+button:hover a {
+  color: #111;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    padding: 0 39px;
+  }
+}
+footer {
+  width: 100%;
+  background: #111;
+  padding: 80px 0;
+}
+footer section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  color: white;
+  background-image: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+footer section .restaurant__info {
+  width: 100%;
+  max-width: 814px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer section .restaurant__info address {
+  width: 100%;
+  max-width: 244px;
+  font-style: normal;
+}
+footer section .restaurant__info .open__time {
+  width: 100%;
+  max-width: 446px;
+}
+
+@media only screen and (max-width: 1000px) {
+  footer {
+    width: 100%;
+    background: #111;
+    padding: 64px 0;
+  }
+  footer section .restaurant__info {
+    width: 100%;
+    max-width: 456px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  footer section .restaurant__info address {
+    width: 100%;
+    max-width: 456px;
+    font-style: normal;
+  }
+  footer section .restaurant__info .open__time {
+    width: 100%;
+    max-width: 456px;
+  }
+}
 header {
   width: 100%;
   padding: 65px 0 198px 0;
@@ -50,6 +165,9 @@ header {
   background-image: url(/img/homepage/hero-bg-desktop.png);
   background-repeat: no-repeat;
   background-position: right 0;
+}
+header #tablet {
+  display: none;
 }
 header .header {
   display: flex;
@@ -95,6 +213,7 @@ header .header section .timer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 15px;
 }
 header .header section .timer div {
   width: 120px;
@@ -195,7 +314,6 @@ main .slider__title {
   display: flex;
   align-items: center;
   padding: 200px 0 120px 0;
-  z-index: -1;
 }
 main .slider__title .title {
   width: 100%;
@@ -255,4 +373,309 @@ main .slider__title .slider .btn__prev {
 }
 main .slider__title .slider .btn__next {
   cursor: pointer;
+}
+main .tab__title {
+  width: 100%;
+  background-image: url(/img/patterns/pattern-curve-top-right.svg);
+  background-repeat: no-repeat;
+  background-position: -350px top;
+  padding: 160px 0;
+}
+main .tab__title .tab__contents {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+main .tab__title .tab__contents .tab__img {
+  width: 100%;
+  max-width: 540px;
+  position: relative;
+}
+main .tab__title .tab__contents .tab__img img {
+  background: #EDEDED;
+  box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+  width: 100%;
+  max-width: 540px;
+}
+main .tab__title .tab__contents .tab__img::before {
+  content: url(/img/patterns/pattern-lines.svg);
+  position: absolute;
+  top: -38px;
+  left: -40px;
+}
+main .tab__title .tab__contents .tab__content {
+  display: flex;
+  flex-direction: column;
+  gap: 79px;
+}
+main .tab__title .tab__contents .tab__content .tab__about {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+main .tab__title .tab__contents .tab__content .tab__about .title__about {
+  gap: 19px;
+}
+main .tab__title .tab__contents .tab__content .tab__links {
+  width: 100%;
+  max-width: 190px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+main .tab__title .tab__contents .tab__content .tab__links .tab__link {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 2.5px;
+  color: rgba(77, 77, 77, 0.5019607843);
+  cursor: pointer;
+  position: relative;
+}
+main .tab__title .tab__contents .tab__content .tab__links .tab__link:hover {
+  color: #4d4d4d;
+}
+main .tab__title .tab__contents .tab__content .tab__links .tab__link::before {
+  position: absolute;
+  left: -127px;
+  top: 14px;
+  content: "";
+  width: 95px;
+  height: 1px;
+  background: #9E7F66;
+}
+main .tab__title .one {
+  display: none;
+}
+main .booking__title {
+  width: 100%;
+  padding: 88px 0;
+  background-image: url(/img/booking/hero-bg-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+main .booking__title .booking__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .booking__title .booking__info h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #FFF;
+}
+main .booking__title .booking__info button {
+  background: none;
+}
+main .booking__title .booking__info button:hover {
+  background: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    padding: 0 0 216px 0;
+    background: #000000;
+    background-image: none;
+  }
+  header #tablet {
+    display: block;
+    width: 100%;
+  }
+  header .header {
+    align-items: center;
+    row-gap: 38px;
+  }
+  header .header section {
+    gap: 0px;
+  }
+  header .header section .header__content {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    gap: 52px;
+  }
+  header .header section .header__content .about {
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+  }
+  header .header section .header__content .about h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: -0.6px;
+  }
+  header .header section .header__content .about p {
+    width: 100%;
+    max-width: 573px;
+    text-align: center;
+  }
+  header .header section .timer {
+    display: none;
+  }
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  main section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 118px;
+    background-image: url(/img/patterns/pattern-curve-top-right.svg), url(/img/patterns/pattern-curve-top-left.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -517px 100px, 511px bottom;
+  }
+  main section .title__about {
+    align-items: center;
+    gap: 39px;
+  }
+  main section .title__about h3 {
+    text-align: center;
+  }
+  main section .title__about p {
+    text-align: center;
+  }
+  main section .enjoyable {
+    align-items: center;
+    gap: 56px;
+    flex-direction: column;
+    transform: translateY(-96px);
+  }
+  main section .enjoyable .enjoyable__img {
+    width: 573px;
+    height: 360px;
+    box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+  }
+  main section .enjoyable .enjoyable__img img {
+    width: 573px;
+    height: 360px;
+  }
+  main section .locally {
+    transform: translateY(px);
+    flex-direction: column-reverse;
+  }
+  main section .locally .enjoyable__img::before {
+    content: url(/img/patterns/pattern-lines.svg);
+    position: absolute;
+    top: 228px;
+    right: -58px;
+  }
+  main .slider__title {
+    padding: 96px 0;
+  }
+  main .slider__title .title {
+    flex-direction: column;
+    align-items: center;
+    gap: 54px;
+  }
+  main .slider__title .slider .slider__content {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    gap: 24px;
+  }
+  main .slider__title .slider .slider__content .slider__one {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1494140625);
+    position: relative;
+  }
+  main .slider__title .slider .slider__content .slider__one::before {
+    display: block;
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: #9E7F66;
+    position: absolute;
+    top: 18px;
+    left: 128px;
+  }
+  main .slider__title .slider .slider__content .slider__one img {
+    width: 128px;
+  }
+  main .slider__title .slider .slider__content .slider__three {
+    border: none;
+  }
+  main .slider__title .slider .btn__prev {
+    display: none;
+  }
+  main .slider__title .slider .btn__next {
+    display: none;
+  }
+  main .tab__title {
+    background-position: -517px top;
+    padding: 120px 0;
+    align-items: center;
+  }
+  main .tab__title .tab__contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 57px;
+  }
+  main .tab__title .tab__contents .tab__img img {
+    width: 573px;
+    height: 360px;
+  }
+  main .tab__title .tab__contents .tab__img::before {
+    top: -38px;
+    left: -58px;
+  }
+  main .tab__title .tab__contents .tab__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 47px;
+  }
+  main .tab__title .tab__contents .tab__content .tab__about {
+    align-items: center;
+  }
+  main .tab__title .tab__contents .tab__content .tab__about .title__about {
+    width: 100%;
+    max-width: 457px;
+  }
+  main .tab__title .tab__contents .tab__content .tab__links {
+    max-width: 689px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  main .tab__title .tab__contents .tab__content .tab__links .tab__link {
+    width: 100%;
+    max-width: 223px;
+    text-align: center;
+  }
+  main .tab__title .tab__contents .tab__content .tab__links .tab__link::before {
+    position: absolute;
+    left: 85px;
+    top: 30px;
+    content: "";
+    width: 48px;
+    height: 1px;
+    background: #9E7F66;
+  }
+  main .tab__title .one {
+    display: none;
+  }
+  main .booking__title {
+    width: 100%;
+    padding: 72px 0 64px 0;
+    background-image: url(/img/booking/hero-bg-tablet.jpg);
+  }
+  main .booking__title .booking__info {
+    flex-direction: column;
+    gap: 24px;
+  }
 }/*# sourceMappingURL=style.css.map */
