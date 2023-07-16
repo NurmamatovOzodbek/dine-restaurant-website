@@ -50,6 +50,11 @@ button:hover a {
     padding: 0 39px;
   }
 }
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 24px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -98,6 +103,11 @@ button:hover a {
 @media only screen and (max-width: 1000px) {
   .container {
     padding: 0 39px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 24px;
   }
 }
 footer {
@@ -156,6 +166,19 @@ footer section .restaurant__info .open__time {
   footer section .restaurant__info .open__time {
     width: 100%;
     max-width: 456px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  footer {
+    padding: 79px 0;
+  }
+  footer section {
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+  }
+  footer section .restaurant__info {
+    text-align: center;
   }
 }
 header {
@@ -548,12 +571,14 @@ main .booking__title .booking__info button:hover {
     transform: translateY(-96px);
   }
   main section .enjoyable .enjoyable__img {
-    width: 573px;
+    width: 100%;
+    max-width: 573px;
     height: 360px;
     box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
   }
   main section .enjoyable .enjoyable__img img {
-    width: 573px;
+    width: 100%;
+    max-width: 573px;
     height: 360px;
   }
   main section .locally {
@@ -623,8 +648,14 @@ main .booking__title .booking__info button:hover {
     align-items: center;
     gap: 57px;
   }
+  main .tab__title .tab__contents .tab__img {
+    width: 100%;
+    max-width: 573px;
+    height: 360px;
+  }
   main .tab__title .tab__contents .tab__img img {
-    width: 573px;
+    width: 100%;
+    max-width: 573px;
     height: 360px;
   }
   main .tab__title .tab__contents .tab__img::before {
@@ -649,18 +680,22 @@ main .booking__title .booking__info button:hover {
   main .tab__title .tab__contents .tab__content .tab__links {
     max-width: 689px;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
   }
   main .tab__title .tab__contents .tab__content .tab__links .tab__link {
     width: 100%;
     max-width: 223px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   main .tab__title .tab__contents .tab__content .tab__links .tab__link::before {
+    margin-top: 35px;
     position: absolute;
-    left: 85px;
-    top: 30px;
+    left: 50px;
     content: "";
     width: 48px;
     height: 1px;
@@ -675,7 +710,123 @@ main .booking__title .booking__info button:hover {
     background-image: url(/img/booking/hero-bg-tablet.jpg);
   }
   main .booking__title .booking__info {
+    text-align: center;
     flex-direction: column;
     gap: 24px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+    width: 100%;
+    padding: 0 0 152px 0;
+    background-image: none;
+  }
+  header .header {
+    align-items: center;
+    row-gap: 36px;
+  }
+  header .header section .header__content .about h1 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.4px;
+  }
+  header .header section .header__content .about p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  main section {
+    row-gap: 101px;
+    background-image: none, none;
+  }
+  main section .title__about {
+    gap: 36px;
+  }
+  main section .title__about h3 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.4px;
+  }
+  main section .title__about p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  main section .enjoyable {
+    gap: 48px;
+    transform: translateY(-72px);
+  }
+  main section .locally .enjoyable__img::before {
+    display: none;
+  }
+  main .slider__title {
+    padding: 72px 0;
+  }
+  main .slider__title .title {
+    gap: 85px;
+  }
+  main .slider__title .slider .slider__content {
+    gap: 24px;
+  }
+  main .slider__title .slider .slider__content .slider__one {
+    text-align: center;
+    flex-direction: column;
+    gap: 36px;
+    padding-bottom: 54px;
+  }
+  main .slider__title .slider .slider__content .slider__one::before {
+    display: none;
+  }
+  main .slider__title .slider .slider__content .slider__one img {
+    width: 100%;
+    max-width: 400px;
+  }
+  main .tab__title {
+    background-image: none;
+    padding: 80px 0;
+  }
+  main .tab__title .tab__contents {
+    gap: 57px;
+  }
+  main .tab__title .tab__contents .tab__img::before {
+    display: none;
+  }
+  main .tab__title .tab__contents .tab__content {
+    gap: 27px;
+  }
+  main .tab__title .tab__contents .tab__content .tab__about {
+    align-items: center;
+    gap: 27px;
+  }
+  main .tab__title .tab__contents .tab__content .tab__about .title__about {
+    width: 100%;
+    max-width: 457px;
+  }
+  main .tab__title .tab__contents .tab__content .tab__links {
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+  main .tab__title .tab__contents .tab__content .tab__links .tab__link::before {
+    margin-top: 15px;
+    left: 80px;
+  }
+  main .booking__title {
+    width: 100%;
+    padding: 84px 0 80px 0;
+    background-image: url(/img/booking/hero-bg-mobile.jpg);
+  }
+  main .booking__title .booking__info {
+    text-align: center;
+    gap: 20px;
+  }
+  main .booking__title .booking__info h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
   }
 }/*# sourceMappingURL=style.css.map */
