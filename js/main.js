@@ -60,3 +60,95 @@ function addZero(num){
 		return num
 	}
 }
+
+let btnLeft = document.querySelector('.btn__prev')
+let btnRight = document.querySelector('.btn__next')
+let userImg = document.querySelectorAll('.slider__content .slide__img')
+let textContent = document.querySelectorAll('.slider__content .slide__about')
+let count = 0
+btnRight.addEventListener('click', ()=>{
+    if(count > textContent.length - 2){
+        count = 0
+    }
+    else{
+        count++
+    }
+    hide()
+    showAll(count)
+})
+btnLeft.addEventListener('click', ()=>{
+    if(count <= 0){
+        count = textContent.length - 1
+    }
+    else{
+        count--
+    }
+    hide()
+    showAll(count)
+})
+
+function hide() {
+    textContent.forEach((txtContent) =>{
+        txtContent.classList.remove('active')
+    })
+    userImg.forEach((imgContent) =>{
+        imgContent.classList.remove('active')
+    })
+}
+function showAll(i = 0) {
+    textContent[i].classList.add('active')
+    userImg[i].classList.add('active')
+}
+hide()
+showAll()
+
+
+
+let tabLinksEl = document.querySelectorAll(".tab__link")
+let tabContentsEl = document.querySelectorAll(".tab__text .title__about")
+let tabImgsEl = document.querySelectorAll(".tab__images .tab__img")
+function tabAll(tabContents,tabLinks,tabImgs){
+    function hiddenTab(){
+        tabContents.forEach((tabContent) => {
+          tabContent.style.display = "none"
+        })
+        tabLinks.forEach((tablink) => {
+            tablink.classList.remove("active")
+        })
+
+    }
+    function showTab(i=0){
+        tabContents[i].style.display = "flex"
+    }
+    tabLinks.forEach((tablink, i) => {
+        tablink.addEventListener('click', () => {
+            tablink.classList.add("active")
+            hiddenTab()
+            showTab(i)
+        })
+    })
+    hiddenTab()
+    showTab()
+    function hiddeTab(){
+        tabImgs.forEach((tabImg) => {
+          tabImg.style.display = "none"
+        })
+        tabLinks.forEach((tablink) => {
+            tablink.classList.remove("active")
+        })
+
+    }
+    function shoTab(i=0){
+        tabImgs[i].style.display = "flex"
+        tabLinks.forEach((tablink, i) => {
+            tablink.addEventListener('click', () => {
+                hiddeTab()
+                shoTab(i)
+                tablink.classList.add("active")
+            })
+        })
+    }
+    hiddeTab()
+    shoTab()
+}
+tabAll(tabContentsEl,tabLinksEl,tabImgsEl)
