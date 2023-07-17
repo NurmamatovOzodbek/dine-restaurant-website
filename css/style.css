@@ -478,9 +478,6 @@ main .tab__title .tab__contents .tab__content .tab__links .tab__link.active {
 main .tab__title .tab__contents .tab__content .tab__links .tab__link.active::before {
   display: block;
 }
-main .tab__title .one {
-  display: none;
-}
 main .booking__title {
   width: 100%;
   padding: 88px 0;
