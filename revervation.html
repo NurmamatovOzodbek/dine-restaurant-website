@@ -1,18 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reservations</title>
-  <link rel="icon" href="./img/icons/icon.png">
-  <link rel="stylesheet" href="./css/reservation.css">
-</head>
-<body>
-
-
-
-
-  <script src="./js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservations</title>
+    <link rel="icon" href="./img/icons/icon.png" />
+    <link rel="stylesheet" href="./css/reservation.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__content container">
+        <header>
+          <a href="./index.html">
+            <img src="./img/logo.svg" alt="">
+          </a>
+        </header>
+        <section>
+          <div class="promo__section">
+            <h1>Reservations</h1>
+            <p>We can't wait to host you. If you have any special requirements please feel free to call on the phone number below. We'll be happy to accommodate you.</p>
+            <button>RESERVE PLACE</button>
+          </div>
+          <form class="forms">
+            <input type="text" name="name"  placeholder="Name" id="name">
+            <input type="email" name="email" placeholder="Email" id="pochta">
+            <div class="pick__about">
+              <label for="">Pick a date</label>
+              <div class="date__content">
+                <select class="date" id="month">
+                  <option value="0">MM</option>
+                </select>
+                <select class="date" id="day">
+                  <option value="0">DD</option>
+                </select>
+                <select class="date" id="year">
+                  <option value="0">YYYY</option>
+                  <!-- <option value="1">2023</option>
+                  <option value="2">2024</option> -->
+                </select>
+              </div>
+            </div>
+            <div class="pick__about">
+              <label for="">Pick a time</label>
+              <div class="date__content">
+                <select name="hour" id="hour">
+                  <!-- <option value="">09</option> -->
+                </select>
+                <select name="minut" id="minut">
+                  <!-- <option value="">00</option> -->
+                </select>
+                <select class="ap" id="ap">
+                  <!-- <img src="./img/icons/icon-arrow.svg" alt=""> -->
+                  <option value="0">AM</option>
+                  <option value="1">PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="count">
+              <div class="minus__btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3">
+                  <path fill="#9E7F66" d="M6.425 2.977V.601H.629v2.376z"/>
+                </svg>
+              </div>
+              <div class="counts">
+              <span class="counter">1</span>
+              <p>people</p>
+              </div>
+              <div class="plus__btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11">
+                  <path fill="#9E7F66" d="M6.227 10.156V6.727h3.429V4.342H6.227V.913H3.842v3.429H.413v2.385h3.429v3.429z"/>
+                </svg>
+              </div>
+            </div>
+            <button>MAKE RESERVATION</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <section class="container">
+        <a href="./index.html">
+          <img src="./img/logo.svg" alt="dine logo">
+        </a>
+        <div class="restaurant__info">
+          <address>
+            Marthwaite, Sedbergh <br>
+            Cumbria <br>
+            +00 44 123 4567
+          </address>
+          <div class="open__time">
+            OPEN TIMES <br>
+            MON - FRI: 09:00 AM - 10:00 PM <br>
+            SAT - SUN: 09:00 AM - 11:30 PM
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
