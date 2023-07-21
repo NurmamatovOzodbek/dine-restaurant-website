@@ -3,10 +3,11 @@ let hour = document.querySelector(".hourse p")
 let minute = document.querySelector(".minutes p")
 let second = document.querySelector(".seconds p")
 let time = document.querySelector(".timer")
-// let days = document.querySelector(".days")
-// let hour = document.querySelector(".hourse")
-// let minutes = document.querySelector(".minutes")
-// let seconds = document.querySelector(".seconds")
+
+let days = document.querySelector(".days")
+let houre = document.querySelector(".hourse")
+let minutes = document.querySelector(".minutes")
+let seconds = document.querySelector(".seconds")
 let deadline = "2023-07-22T13:00:00Z"
 
 function dataTimer(dl){
@@ -35,18 +36,18 @@ function startTimer(dl){
         hour.innerText = addZero(timer.hours)
         minute.innerText = addZero(timer.minutes)
         second.innerText = addZero(timer.seconds)
-    //  if(day.innerText == 0){
-    //   days.style.display = "none"
-    // }
-    //  if(hours.innerText == 0){
-    //   hour.style.display = "none"
-    // }if(minute.innerText == 0){
-    //   minutes.style.display = "none"
-    // }if(second.innerText == 0){
-    //   seconds.style.display = "none"
-    // }
+        if(day.innerText == 0){
+         days.style.display = "none"
+       }
+        if(hour.innerText == 0 && day.innerText == 0){
+         houre.style.display = "none"
+       }if(minute.innerText == 0 && hour.innerText == 0 && day.innerText == 0){
+         minutes.style.display = "none"
+       }if(second.innerText == 0 && minute.innerText == 0 && hour.innerText == 0 && day.innerText == 0){
+         seconds.style.display = "none"
+       }
         if(timer.t < 0){
-        clearInterval(timerId)
+            clearInterval(timerId)
         }
 	}
 	updateTimer()
