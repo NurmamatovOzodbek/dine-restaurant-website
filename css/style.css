@@ -10,6 +10,10 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 body::-webkit-scrollbar {
   width: 0;
@@ -36,6 +40,7 @@ button a {
   font-size: 17px;
   color: #FFF;
   text-decoration: none;
+  user-select: none;
 }
 button:hover {
   background: white;
@@ -65,6 +70,10 @@ button:hover a {
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 body::-webkit-scrollbar {
   width: 0;
@@ -91,6 +100,7 @@ button a {
   font-size: 17px;
   color: #FFF;
   text-decoration: none;
+  user-select: none;
 }
 button:hover {
   background: white;
@@ -114,6 +124,7 @@ footer {
   width: 100%;
   background: #111;
   padding: 80px 0;
+  margin-bottom: auto;
 }
 footer section {
   width: 100%;
@@ -183,6 +194,7 @@ footer section .restaurant__info .open__time {
 }
 header {
   width: 100%;
+  max-width: 1560px;
   padding: 65px 0 198px 0;
   background: rgb(0, 0, 0);
   background-image: url(/img/homepage/hero-bg-desktop.png);
@@ -196,6 +208,9 @@ header .header {
   display: flex;
   flex-direction: column;
   row-gap: 153px;
+}
+header .header a {
+  user-select: none;
 }
 header .header section {
   width: 100%;
@@ -264,6 +279,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 main section {
   width: 100%;
@@ -356,21 +372,46 @@ main .slider__title .slider {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+main .slider__title .slider::before {
+  position: absolute;
+  content: "";
+  width: 540px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1490196078);
+  top: 170px;
+  left: 35px;
+}
+main .slider__title .slider::after {
+  position: absolute;
+  content: "";
+  width: 540px;
+  height: 1px;
+  top: 317px;
+  left: 35px;
+  background: rgba(255, 255, 255, 0.1490196078);
 }
 main .slider__title .slider .slider__content {
   width: 100%;
   max-width: 444px;
   display: flex;
-  overflow: hidden;
+  align-items: center;
+  position: relative;
 }
 main .slider__title .slider .slider__content .slider__one {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 24px;
 }
+main .slider__title .slider .slider__content .slider__one.active {
+  display: flex;
+  z-index: 9999;
+}
 main .slider__title .slider .slider__content .slider__one img {
-  width: 444px;
+  width: 100%;
+  max-width: 444px;
 }
 main .slider__title .slider .slider__content .slider__one .slide__about {
   width: 100%;
@@ -390,13 +431,7 @@ main .slider__title .slider .slider__content .slider__one .slide__about p {
   font-weight: 400;
   line-height: 26px;
 }
-main .slider__title .slider .slider__content .slider__one .one {
-  display: none;
-}
-main .slider__title .slider .btn__prev {
-  cursor: pointer;
-}
-main .slider__title .slider .btn__next {
+main .slider__title .slider .btn__prev, main .slider__title .slider .btn__next {
   cursor: pointer;
 }
 main .tab__title {
@@ -458,6 +493,7 @@ main .tab__title .tab__contents .tab__content .tab__links .tab__link {
   color: rgba(77, 77, 77, 0.5019607843);
   cursor: pointer;
   position: relative;
+  user-select: none;
 }
 main .tab__title .tab__contents .tab__content .tab__links .tab__link:hover {
   color: #4d4d4d;
@@ -605,6 +641,9 @@ main .booking__title .booking__info button:hover {
     align-items: center;
     gap: 54px;
   }
+  main .slider__title .slider::before, main .slider__title .slider::after {
+    display: none;
+  }
   main .slider__title .slider .slider__content {
     width: 100%;
     max-width: 100%;
@@ -612,6 +651,7 @@ main .booking__title .booking__info button:hover {
     gap: 24px;
   }
   main .slider__title .slider .slider__content .slider__one {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -631,7 +671,8 @@ main .booking__title .booking__info button:hover {
     left: 128px;
   }
   main .slider__title .slider .slider__content .slider__one img {
-    width: 128px;
+    width: 100%;
+    max-width: 128px;
   }
   main .slider__title .slider .slider__content .slider__three {
     border: none;
@@ -656,13 +697,11 @@ main .booking__title .booking__info button:hover {
   }
   main .tab__title .tab__contents .tab__img {
     width: 100%;
-    max-width: 573px;
-    height: 360px;
+    max-width: 650px;
   }
   main .tab__title .tab__contents .tab__img img {
     width: 100%;
-    max-width: 573px;
-    height: 360px;
+    max-width: 630px;
   }
   main .tab__title .tab__contents .tab__img::before {
     top: -38px;
@@ -773,6 +812,9 @@ main .booking__title .booking__info button:hover {
   }
   main .slider__title .title {
     gap: 85px;
+  }
+  main .slider__title .slider::before, main .slider__title .slider::after {
+    display: none;
   }
   main .slider__title .slider .slider__content {
     gap: 24px;
