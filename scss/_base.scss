@@ -8,10 +8,15 @@
 body{
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   &::-webkit-scrollbar{
     width: 0;
   }
 }
+
 .container{
   max-width: 1140px;
   margin: 0 auto;
@@ -24,6 +29,7 @@ button{
   border: 1px solid #FFF;
   background: #111;
   cursor: pointer;
+
   a{
     font-weight: 600;
     line-height: 16px;
@@ -31,6 +37,7 @@ button{
     font-size: 17px;
     color: #FFF;
     text-decoration: none;
+    user-select: none;
   }
   &:hover{
     background: white;
