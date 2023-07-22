@@ -207,6 +207,7 @@ if(inpName.value.length != 0 && inpEmail.value.length != 0 && selectDays.value !
   console.log(userDate)
 }else{
   console.log('Error')
+
 }
 })
 // console.log(form)
