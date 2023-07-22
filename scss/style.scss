@@ -2,14 +2,20 @@
 @import "./footer";
 header{
   width: 100%;
-  max-width: 1560px;
-  padding: 65px 0 198px 0;
-  background: rgb(0, 0, 0);
-  background-image: url(/img/homepage/hero-bg-desktop.png);
-  background-repeat: no-repeat;
-  background-position: right 0;
+  background: #000;
+
   #tablet{
     display: none;
+  }
+  .big__container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1560px;
+    padding: 65px 0 198px 0;
+    background: rgb(0, 0, 0);
+    background-image: url(/img/homepage/hero-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: right 0;
   }
   .header{
     display: flex;
@@ -148,6 +154,7 @@ main{
       .enjoyable__img{
         position: relative;
         &::before{
+          display: none;
           content: url(/img/patterns/pattern-lines.svg);
           position: absolute;
           top: 282px;
