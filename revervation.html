@@ -22,27 +22,39 @@
             <p>We can't wait to host you. If you have any special requirements please feel free to call on the phone number below. We'll be happy to accommodate you.</p>
             <button>RESERVE PLACE</button>
           </div>
-          <form class="forms">
-            <input type="text" name="name"  placeholder="Name" id="name">
-            <input type="email" name="email" placeholder="Email" id="pochta">
-            <div class="pick__about">
-              <label for="">Pick a date</label>
+          <form class="form" id="form">
+            <div class="form__group name">
+              <input type="text" name="name"  placeholder="Name" id="name">
+              <div class="error"></div>
+            </div>
+            <div class="form__group name email">
+              <input type="email" name="email" placeholder="Email" id="email">
+              <div class="error"></div>
+            </div>
+            <div class="form__group pick__about">
+              <div class="pick__error">
+                <label for="" id="date">Pick a date</label>
+                <div class="error"></div>
+              </div>
               <div class="date__content">
-                <select class="date" id="month">
+                <select name="month" id="month">
                   <option value="0">MM</option>
                 </select>
-                <select class="date" id="day">
+                <select name="day" id="day">
                   <option value="0">DD</option>
                 </select>
-                <select class="date" id="year">
-                  <option value="0">YYYY</option>
+                <select name="year" id="year">
+                  <option value="0000">YYYY</option>
                   <!-- <option value="1">2023</option>
                   <option value="2">2024</option> -->
                 </select>
               </div>
             </div>
-            <div class="pick__about">
-              <label for="">Pick a time</label>
+            <div class="form__group pick__about">
+              <div class="pick__error">
+                <label for="" id="time">Pick a time</label>
+                <div class="error"></div>
+              </div>
               <div class="date__content">
                 <select name="hour" id="hour">
                   <!-- <option value="">09</option> -->
@@ -50,10 +62,10 @@
                 <select name="minut" id="minut">
                   <!-- <option value="">00</option> -->
                 </select>
-                <select class="ap" id="ap">
+                <select class="ap" name="ap" id="ap">
                   <!-- <img src="./img/icons/icon-arrow.svg" alt=""> -->
-                  <option value="0">AM</option>
-                  <option value="1">PM</option>
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
                 </select>
               </div>
             </div>
@@ -64,7 +76,7 @@
                 </svg>
               </div>
               <div class="counts">
-              <span class="counter">1</span>
+              <span class="counter" name="count">1</span>
               <p>people</p>
               </div>
               <div class="plus__btn">
@@ -73,7 +85,7 @@
                 </svg>
               </div>
             </div>
-            <button>MAKE RESERVATION</button>
+            <button type="submit">MAKE RESERVATION</button>
           </form>
         </section>
       </div>
