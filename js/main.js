@@ -8,7 +8,7 @@ let days = document.querySelector(".days")
 let houre = document.querySelector(".hourse")
 let minutes = document.querySelector(".minutes")
 let seconds = document.querySelector(".seconds")
-let deadline = "2023-07-22T13:00:00Z"
+let deadline = "2023-07-23T14:00:00Z"
 
 function dataTimer(dl){
   let t = Date.parse(new Date(dl)) - Date.parse(new Date()),
