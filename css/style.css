@@ -14,6 +14,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   width: 0;
@@ -74,6 +75,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   width: 0;
@@ -194,15 +196,20 @@ footer section .restaurant__info .open__time {
 }
 header {
   width: 100%;
+  background: #000;
+}
+header #tablet {
+  display: none;
+}
+header .big__container {
+  margin: 0 auto;
+  width: 100%;
   max-width: 1560px;
   padding: 65px 0 198px 0;
   background: rgb(0, 0, 0);
   background-image: url(/img/homepage/hero-bg-desktop.png);
   background-repeat: no-repeat;
   background-position: right 0;
-}
-header #tablet {
-  display: none;
 }
 header .header {
   display: flex;
@@ -341,6 +348,7 @@ main section .locally .enjoyable__img {
   position: relative;
 }
 main section .locally .enjoyable__img::before {
+  display: none;
   content: url(/img/patterns/pattern-lines.svg);
   position: absolute;
   top: 282px;
