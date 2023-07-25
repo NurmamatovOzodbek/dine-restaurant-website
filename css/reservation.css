@@ -486,6 +486,9 @@ footer section .restaurant__info .open__time {
     display: block;
     margin-top: 6px;
   }
+  .header .header__content section form {
+    padding: 24px;
+  }
   .header .header__content section form input {
     width: 100%;
     max-width: 444px;
@@ -493,9 +496,9 @@ footer section .restaurant__info .open__time {
     outline: none;
     border: none;
     border-bottom: 1px solid #8E8E8E;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 15px;
     color: #111111;
   }
   .header .header__content section form input.active {
