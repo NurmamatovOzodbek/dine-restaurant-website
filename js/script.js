@@ -2,25 +2,28 @@ let { form } = document.forms
 let btnPlus = document.querySelector(".plus__btn")
 let btnMinus = document.querySelector(".minus__btn")
 let countSpan = document.querySelector(".counter")
+let errorCount = document.querySelector(".count")
 let count = 1
 let error = document.querySelector(".error")
 
 btnPlus.addEventListener('click', () => {
   if(countSpan.innerText >19){
-    alert("Ko'pi bilan 20 kishilik stol buyurtma qila olasiz")
+    errorCount.nextElementSibling.textContent = "Ko'pi bilan 20 kishilik stol buyurtma qila olasiz"
     countSpan.innerText = 20
   }
   else{
+    errorCount.nextElementSibling.textContent = ""
     countSpan.innerText++
     count = countSpan.innerText
   }
 })
 btnMinus.addEventListener('click', () => {
   if(countSpan.innerText <= 1){
-    alert("Eng kamida 1 kishi bo'lishi kerak")
+    errorCount.nextElementSibling.textContent = "Eng kamida 1 kishi bo'lishi kerak"
     countSpan.innerText = 1
     count = countSpan.innerText
   }else{
+    errorCount.nextElementSibling.textContent = ""
     countSpan.innerText--
     count = countSpan.innerText
   }
@@ -47,17 +50,17 @@ for (let i=1;i <= 12 ;i++){
   }
   selectMonths.append(option)
 }
-for(let i=1; i<=31; i++){
-  let option = document.createElement('option')
-    if(i < 10){
-        option.text = `0${i}`
-        option.value = `0${i}`
-    }else{
-        option.text = i
-        option.value = i
-    }
-    selectDays.append(option)
-}
+// for(let i=1; i<=31; i++){
+//   let option = document.createElement('option')
+//     if(i < 10){
+//         option.text = `0${i}`
+//         option.value = `0${i}`
+//     }else{
+//         option.text = i
+//         option.value = i
+//     }
+//     selectDays.append(option)
+// }
 years.forEach((item) => {
   let option = document.createElement('option')
   option.text = item
@@ -87,12 +90,52 @@ for(let i=0; i<=59; i++){
   selectMinuts.append(option)
 }
 
+function monthDayNUmber(){
+  if(selectMonths.value == 2){
+    for(let i=1; i<=28; i++){
+      let option = document.createElement('option')
+        if(i < 10){
+            option.text = `0${i}`
+            option.value = `0${i}`
+        }else{
+            option.text = i
+            option.value = i
+        }
+        selectDays.append(option)
+    }
+  }else if(selectMonths.value == 1 || selectMonths.value == 3 || selectMonths.value == 5 || selectMonths.value == 7 || selectMonths.value == 8 || selectMonths.value == 10 || selectMonths.value == 12){
+    for(let i=1; i<=31; i++){
+      let option = document.createElement('option')
+        if(i < 10){
+            option.text = `0${i}`
+            option.value = `0${i}`
+        }else{
+            option.text = i
+            option.value = i
+        }
+        selectDays.append(option)
+    }
+  }else{
+    for(let i=1; i<=30; i++){
+      let option = document.createElement('option')
+        if(i < 10){
+            option.text = `0${i}`
+            option.value = `0${i}`
+        }else{
+            option.text = i
+            option.value = i
+        }
+        selectDays.append(option)
+    }
+  }
+}
 selectMonths.addEventListener('blur', () =>{
   if(selectMonths.value == 0){
     pickDate.nextElementSibling.innerText = "This field is required"
   }else if(selectDays.value != 0 && selectYears.value != 0){
     pickDate.nextElementSibling.innerText = ""
   }
+  monthDayNUmber()
 })
 selectDays.addEventListener('blur', () =>{
   if(selectDays.value == 0){
