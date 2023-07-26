@@ -5,6 +5,12 @@ let countSpan = document.querySelector(".counter")
 let errorCount = document.querySelector(".count")
 let count = 1
 let error = document.querySelector(".error")
+let modalPage = document.querySelector(".inner")
+let btnModal = document.querySelector(".inner button")
+let modalDateSpan = document.querySelector(".inner p .date")
+let modalTimeSpan = document.querySelector(".inner p .time")
+let modalPeopleSpan = document.querySelector(".inner p .people")
+
 
 btnPlus.addEventListener('click', () => {
   if(countSpan.innerText >19){
@@ -234,6 +240,10 @@ form.addEventListener('submit', (e) => {
     if(selectDays.value <= now.getDate() && selectMonths.value < now.getMonth() + 1 || selectDays.value <= now.getDate() && selectMonths.value == now.getMonth() + 1){
       pickDate.nextElementSibling.innerText = "Oldingi vaqtni kiritdingiz"
     }else if(selectMonths.value >= now.getMonth()+1 && selectDays.value < now.getDate() || selectMonths.value >= now.getMonth()+1 && selectDays.value > now.getDate()){
+      modalPage.style.display = "flex"
+      modalDateSpan.innerText = selectYears.value  + "-" + selectMonths.value + "-" + selectDays.value
+      modalTimeSpan.innerText = selectHours.value + ":" + selectMinuts.value
+      modalPeopleSpan.innerText = count
       pickDate.nextElementSibling.innerText = ""
       let userDate = {
         name: inpName.value,
@@ -245,6 +255,9 @@ form.addEventListener('submit', (e) => {
     }
   }
 
+})
+btnModal.addEventListener("click", () => {
+  modalPage.style.display = "none"
 })
 
 

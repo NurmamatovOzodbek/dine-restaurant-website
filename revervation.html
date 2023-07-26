@@ -9,88 +9,97 @@
     <link rel="stylesheet" href="./css/reservation.css" />
   </head>
   <body>
-    <div class="header">
-      <div class="header__content container">
-        <header>
-          <a href="./index.html">
-            <img src="./img/logo.svg" alt="">
-          </a>
-        </header>
-        <section>
-          <div class="promo__section">
-            <h1>Reservations</h1>
-            <p>We can't wait to host you. If you have any special requirements please feel free to call on the phone number below. We'll be happy to accommodate you.</p>
-            <button>RESERVE PLACE</button>
-          </div>
-          <form class="form" id="form">
-            <div class="form__group name">
-              <input type="text" name="name"  placeholder="Name" id="name">
-              <div class="error"></div>
+    <div class="wrapper">
+      <div class="header">
+        <div class="header__content container">
+          <header>
+            <a href="./index.html">
+              <img src="./img/logo.svg" alt="">
+            </a>
+          </header>
+          <section>
+            <div class="promo__section">
+              <h1>Reservations</h1>
+              <p>We can't wait to host you. If you have any special requirements please feel free to call on the phone number below. We'll be happy to accommodate you.</p>
+              <button>RESERVE PLACE</button>
             </div>
-            <div class="form__group name email">
-              <input type="email" name="email" placeholder="Email" id="email">
-              <div class="error"></div>
-            </div>
-            <div class="form__group pick__about">
-              <div class="pick__error">
-                <label for="" id="date">Pick a date</label>
+            <form class="form" id="form">
+              <div class="form__group name">
+                <input type="text" name="name"  placeholder="Name" id="name">
                 <div class="error"></div>
               </div>
-              <div class="date__content">
-                <select name="month" id="month">
-                  <option value="0">MM</option>
-                </select>
-                <select name="day" id="day">
-                  <option value="0">DD</option>
-                </select>
-                <select name="year" id="year">
-                  <option value="0">YYYY</option>
-                  <!-- <option value="1">2023</option>
-                  <option value="2">2024</option> -->
-                </select>
-              </div>
-            </div>
-            <div class="form__group pick__about">
-              <div class="pick__error">
-                <label for="" id="time">Pick a time</label>
+              <div class="form__group name email">
+                <input type="email" name="email" placeholder="Email" id="email">
                 <div class="error"></div>
               </div>
-              <div class="date__content">
-                <select name="hour" id="hour">
-                  <!-- <option value="">09</option> -->
-                </select>
-                <select name="minut" id="minut">
-                  <!-- <option value="">00</option> -->
-                </select>
-                <select class="ap" name="ap" id="ap">
-                  <!-- <img src="./img/icons/icon-arrow.svg" alt=""> -->
-                  <option value="AM">AM</option>
-                  <option value="PM">PM</option>
-                </select>
-              </div>
-            </div>
-            <div class="count__people">
-              <div class="count">
-                <div class="minus__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3">
-                    <path fill="#9E7F66" d="M6.425 2.977V.601H.629v2.376z"/>
-                  </svg>
+              <div class="form__group pick__about">
+                <div class="pick__error">
+                  <label for="" id="date">Pick a date</label>
+                  <div class="error"></div>
                 </div>
-                <div class="counts">
-                  <span class="counter" name="count">1</span>
-                  <p>people</p>
-                </div>
-                <div class="plus__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11">
-                    <path fill="#9E7F66" d="M6.227 10.156V6.727h3.429V4.342H6.227V.913H3.842v3.429H.413v2.385h3.429v3.429z"/>
-                  </svg>
+                <div class="date__content">
+                  <select name="month" id="month">
+                    <option value="0">MM</option>
+                  </select>
+                  <select name="day" id="day">
+                    <option value="0">DD</option>
+                  </select>
+                  <select name="year" id="year">
+                    <option value="0">YYYY</option>
+                    <!-- <option value="1">2023</option>
+                    <option value="2">2024</option> -->
+                  </select>
                 </div>
               </div>
-              <div class="error"></div>
-            </div>
-            <button type="submit">MAKE RESERVATION</button>
-          </form>
-        </section>
+              <div class="form__group pick__about">
+                <div class="pick__error">
+                  <label for="" id="time">Pick a time</label>
+                  <div class="error"></div>
+                </div>
+                <div class="date__content">
+                  <select name="hour" id="hour">
+                    <!-- <option value="">09</option> -->
+                  </select>
+                  <select name="minut" id="minut">
+                    <!-- <option value="">00</option> -->
+                  </select>
+                  <select class="ap" name="ap" id="ap">
+                    <!-- <img src="./img/icons/icon-arrow.svg" alt=""> -->
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                  </select>
+                </div>
+              </div>
+              <div class="count__people">
+                <div class="count">
+                  <div class="minus__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3">
+                      <path fill="#9E7F66" d="M6.425 2.977V.601H.629v2.376z"/>
+                    </svg>
+                  </div>
+                  <div class="counts">
+                    <span class="counter" name="count">1</span>
+                    <p>people</p>
+                  </div>
+                  <div class="plus__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11">
+                      <path fill="#9E7F66" d="M6.227 10.156V6.727h3.429V4.342H6.227V.913H3.842v3.429H.413v2.385h3.429v3.429z"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="error"></div>
+              </div>
+              <button type="submit">MAKE RESERVATION</button>
+            </form>
+          </section>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="inner__content">
+          <h2>Thanks you!!!</h2>
+          <p>Siz <span class="date"></span> kuni soat <span class="time"></span> da <span class="people"></span> kishilik joy band qildingiz</p>
+          <button class="btn">Tushundim</button>
+        </div>
       </div>
     </div>
     <footer>
@@ -112,6 +121,7 @@
         </div>
       </section>
     </footer>
+
     <script src="./js/script.js"></script>
   </body>
 </html>
