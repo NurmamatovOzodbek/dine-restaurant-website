@@ -3,26 +3,26 @@ let btnPlus = document.querySelector(".plus__btn")
 let btnMinus = document.querySelector(".minus__btn")
 let countSpan = document.querySelector(".counter")
 let count = 1
+let error = document.querySelector(".error")
 
 btnPlus.addEventListener('click', () => {
-  // countSpan.innerText=1
-  countSpan.innerText++
-  count = countSpan.innerText
-  // countStatus = true
-  console.log(count)
+  if(countSpan.innerText >19){
+    alert("Ko'pi bilan 20 kishilik stol buyurtma qila olasiz")
+    countSpan.innerText = 20
+  }
+  else{
+    countSpan.innerText++
+    count = countSpan.innerText
+  }
 })
 btnMinus.addEventListener('click', () => {
   if(countSpan.innerText <= 1){
     alert("Eng kamida 1 kishi bo'lishi kerak")
     countSpan.innerText = 1
     count = countSpan.innerText
-    // countStatus = true
   }else{
-
     countSpan.innerText--
     count = countSpan.innerText
-    // countStatus=true
-    console.log(count)
   }
 })
 
@@ -37,95 +37,81 @@ let selectMonths = document.querySelector("#month"),
 let years = ["2023","2024","2025"]
 
 for (let i=1;i <= 12 ;i++){
-    let option = document.createElement('option')
-    if(i < 10){
-        option.text = `0${i}`
-    }else{
-        option.text = i
-    }
-    option.value = i
-    selectMonths.appendChild(option)
-    // console.log(selectMonths);
+  let option = document.createElement('option')
+  if(i < 10){
+      option.text = `0${i}`
+      option.value = `0${i}`
+  }else{
+      option.text = i
+      option.value = i
+  }
+  selectMonths.append(option)
 }
 for(let i=1; i<=31; i++){
   let option = document.createElement('option')
     if(i < 10){
         option.text = `0${i}`
+        option.value = `0${i}`
     }else{
         option.text = i
+        option.value = i
     }
-    option.value = i
-    selectDays.appendChild(option)
-      // console.log(selectDays)
+    selectDays.append(option)
 }
 years.forEach((item) => {
   let option = document.createElement('option')
   option.text = item
   option.value = item
-  selectYears.appendChild(option)
-  // console.log(selectYears)
+  selectYears.append(option)
 })
 for(let i=1; i<=12; i++){
   let option = document.createElement("option")
   if(i<10){
     option.text =`0${i}`
+    option.value = `0${i}`
   }else{
     option.text = i
+    option.value = i
   }
-  option.value = i
-  selectHours.appendChild(option)
-  // console.log(selectHours)
+  selectHours.append(option)
 }
 for(let i=0; i<=59; i++){
   let option = document.createElement("option")
   if(i<10){
     option.text =`0${i}`
+    option.value = `0${i}`
   }else{
     option.text = i
+    option.value = i
   }
-  option.value = i
-  selectMinuts.appendChild(option)
+  selectMinuts.append(option)
 }
-// console.log(selectMinuts)
 
 selectMonths.addEventListener('blur', () =>{
   if(selectMonths.value == 0){
     pickDate.nextElementSibling.innerText = "This field is required"
-    dateStatus = false
   }else if(selectDays.value != 0 && selectYears.value != 0){
     pickDate.nextElementSibling.innerText = ""
-    dateStatus = true
   }
 })
 selectDays.addEventListener('blur', () =>{
   if(selectDays.value == 0){
     pickDate.nextElementSibling.innerText = "This field is required"
-    dateStatus = false
   }else if(selectYears.value != 0 && selectMonths.value != 0){
     pickDate.nextElementSibling.innerText = ""
-    dateStatus = true
   }
 })
 selectYears.addEventListener('blur', () =>{
   if(selectYears.value == 0){
     pickDate.nextElementSibling.innerText = "This field is required"
-    dateStatus = false
   }else if(selectDays.value != 0 && selectMonths.value != 0){
     pickDate.nextElementSibling.innerText = ""
-    dateStatus = true
   }
 })
 let inpName = document.querySelector("#name"),
     inpEmail = document.querySelector("#email")
 
 
-
-let nameStatus = false,
-    emailStatus = false,
-    dateStatus = false,
-    hourStatus = false,
-    minuteStatus = false,
-    countStatus = false
 
 function showError(parentElement,msgElement,message){
   msgElement.textContent = message
@@ -152,18 +138,14 @@ function validateInput(e){
   if(target.name === 'name'){
     if(target.value.length <= 2){
       showError(formGroup,errorElement,'This field is required')
-      nameStatus = false
     }else{
       hideError(formGroup,errorElement)
-      nameStatus = true
     }
   }else if(target.name === 'email'){
-    if(!target.value.includes('@')){
+    if(!target.value.includes('@') || !target.value.includes('gmail') || !target.value.includes('.') || !target.value.includes('com')){
         showError(formGroup,errorElement,'This field is required')
-        emailStatus = false
     }else{
         hideError(formGroup,errorElement)
-      emailStatus = true
     }
   }
 }
@@ -173,10 +155,8 @@ inpName.addEventListener('blur', (e) => {
 	let errorElement = inpName.nextElementSibling
 	if(target.value === ''){
 		showError(formGroup, errorElement, "To'ldirilishi shart")
-		nameStatus = false
 	}else{
 		hideError(formGroup, errorElement)
-		nameStatus = true
 	}
 })
 inpEmail.addEventListener('blur', (e) => {
@@ -185,29 +165,45 @@ inpEmail.addEventListener('blur', (e) => {
 	let errorElement = inpEmail.nextElementSibling
 	if(target.value === ''){
 		showError(formGroup, errorElement, "To'ldirilishi shart")
-		emailStatus = false
 	}else{
 		hideError(formGroup, errorElement)
-		emailStatus = true
 	}
 })
+
+let now = new Date()
+// function errorDate(){
+//   if(selectDays.value < now.getDate() && selectMonths.value < now.getMonth() + 1 || selectDays.value < now.getDate() && selectMonths.value == now.getMonth() + 1){
+//     pickDate.nextElementSibling.innerText = "Oldingi vaqtni kiritdingiz"
+//   }else if(selectMonths.value > now.getMonth()+1 && selectDays.value < now.getDate() || selectMonths.value > now.getMonth()+1 && selectDays.value > now.getDate()){
+//     pickDate.nextElementSibling.innerText = ""
+//   }
+// }
 form.addEventListener('submit', (e) => {
 	e.preventDefault()
-	// let formData = new FormData(form)
-	// let values = Object.fromEntries(formData.entries())
-if(inpName.value.length != 0 && inpEmail.value.length != 0 && selectDays.value != 0 && selectMonths.value != 0 && selectYears.value != 0){
-  let userDate = {
-    name: inpName.value,
-    email: inpEmail.value,
-    date: `0${selectDays.value}` + "-" + `0${selectMonths.value}` + "-" + `${selectYears.value}`,
-    time: `0${selectHours.value}` + ":" + `0${selectMinuts.value}`,
-    AMorPM: ap.value,
-    countPeople: count
+  // errorDate()
+  if(inpName.value.length == 0 && inpEmail.value.length == 0 && selectDays.value == 0 && selectMonths.value == 0 && selectYears.value == 0){
+    console.log('Error')
+    error.innerText = "To'ldirish shart"
+    pickDate.nextElementSibling.innerText = "To'ldirish shart"
+    inpEmail.nextElementSibling.innerText = "To'ldirish shart"
   }
-  console.log(userDate)
-}else{
-  console.log('Error')
+  else{
+    if(selectDays.value <= now.getDate() && selectMonths.value < now.getMonth() + 1 || selectDays.value <= now.getDate() && selectMonths.value == now.getMonth() + 1){
+      pickDate.nextElementSibling.innerText = "Oldingi vaqtni kiritdingiz"
+    }else if(selectMonths.value >= now.getMonth()+1 && selectDays.value < now.getDate() || selectMonths.value >= now.getMonth()+1 && selectDays.value > now.getDate()){
+      pickDate.nextElementSibling.innerText = ""
+      let userDate = {
+        name: inpName.value,
+        email: inpEmail.value,
+        time: selectYears.value  + "-" + selectMonths.value + "-" + selectDays.value + "T" + selectHours.value + ":" + selectMinuts.value + "Z" +" " + ap.value,
+        people: count
+      }
+      console.log(userDate)
+    }
+  }
 
-}
 })
-// console.log(form)
+
+
+// let c = now.getMonth()
+// console.log(now,c)

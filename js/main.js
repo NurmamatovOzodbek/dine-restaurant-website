@@ -8,7 +8,7 @@ let days = document.querySelector(".days")
 let houre = document.querySelector(".hourse")
 let minutes = document.querySelector(".minutes")
 let seconds = document.querySelector(".seconds")
-let deadline = "2023-07-23T14:00:00Z"
+let deadline = "2023-07-31T18:59:59Z"
 
 function dataTimer(dl){
   let t = Date.parse(new Date(dl)) - Date.parse(new Date()),
@@ -124,6 +124,7 @@ function tabAll(tabContents,tabLinks,tabImgs){
     }
     function showTab(i=0){
         tabContents[i].style.display = "flex"
+        // tabLinks[i].classList.add("active")
     }
     tabLinks.forEach((tablink, i) => {
         tablink.addEventListener('click', () => {
